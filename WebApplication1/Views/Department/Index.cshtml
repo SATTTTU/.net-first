@@ -1,0 +1,55 @@
+﻿@model List<Student>
+@{
+    ViewData["Title"] = "Home Page";
+    int a = 1;
+    int b = 2;
+    int sum = a + b;
+}
+
+<style>
+    table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    text-align: left;
+    font-family: Arial, sans-serif;
+    }
+    th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    }
+    th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    }
+    tr:nth-child(even) {
+    background-color: #f9f9f9;
+    }
+    tr:hover {
+    background-color: #f1f1f1;
+    }
+</style>
+
+<h2>Student Details</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Roll</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Description</td>
+                <td>@item.Roll</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<h1>sum=@sum</h1>
+
