@@ -13,5 +13,10 @@ namespace WebApplication1.Controllers
             return View(deplist);
            
         }
+        public IActionResult Department(string model){
+        if(not NULL){
+        return(model);
+        }
+        return(model);
     }
 }
