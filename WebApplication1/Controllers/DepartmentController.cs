@@ -86,5 +86,10 @@ namespace WebApplication1.Controllers
             _cache.Set("studentList", dList);
             return RedirectToAction("Index");
         }
+        public IActionResult Department(string model){
+        if(not NULL){
+        return(model);
+        }
+        return(model);
     }
 }
